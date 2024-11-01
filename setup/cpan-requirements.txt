@@ -1,0 +1,58 @@
+#  vim:ts=4:sts=4:sw=4:noet
+#
+#  Author: Nho Luong
+#  Date: 2013-01-06 15:45:00 +0000 (Sun, 06 Jan 2013)
+#
+#  https://github.com/nholuongut/lib
+#
+#  License: see accompanying Nho Luong LICENSE file
+#
+#  https://www.linkedin.com/in/nholuong
+#
+
+# ============================================================================ #
+#                            CPAN Module Dependencies
+# ============================================================================ #
+
+# moved to bash-tools repo dependencies as script lives there now
+# needed by bash-tools/perl/perl_generate_fatpacks.sh
+#App::FatPacker
+
+# needed for other modules to build
+inc::Module::Install
+
+# Most CPAN modules have been replaced with System Packages (RPM / Debs)
+# and placed in cpan-packaged-requirements.txt
+
+# need to avoid this error:
+# nholuongut/HBase/Thrift.pm:       Base class package "Class::Accessor" is empty.
+Class::Accessor
+
+#Term::ANSIColor
+Test::More
+
+# pinning version to stop it breaking Travis CI Perl 5.10 builds
+#Data::Dumper@2.161
+
+#Devel::Cover::Report::Coveralls
+#ExtUtils::Constant
+#IO::Socket::IP
+#IO::Socket::Timeout
+#Readonly
+#Readonly::XS
+
+# needed by Hbase/Constants.pm
+parent
+
+# needed to put $PERL5LIB paths back in @INC in Taint mode
+perl5lib
+
+# needed to fix this error in Semaphore CI
+# ./nholuongut/Datameer.pm:       Attempt to reload JSON/XS.pm aborted.
+# Compilation failed in require at ./nholuongut/Datameer.pm line 22.
+# BEGIN failed--compilation aborted at ./nholuongut/Datameer.pm line 22.
+common::sense
+Types::Serialiser
+
+# nifty for yaml2json() function in DevOps-Bash-tools lib/utils.sh, but not called by code in this repo
+#YAML::XS

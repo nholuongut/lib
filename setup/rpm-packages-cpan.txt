@@ -1,0 +1,41 @@
+#  vim:ts=4:sts=4:sw=4:noet
+#
+#  Author: Nho Luong
+#  Date: 2013-01-06 15:45:00 +0000 (Sun, 06 Jan 2013)
+#
+#  https://github.com/nholuongut/lib
+#
+#  License: see accompanying Nho Luong LICENSE file
+#
+#  https://www.linkedin.com/in/nholuong
+#
+
+# ============================================================================ #
+#                         RPM CPAN Package Requirements
+# ============================================================================ #
+
+# Install if available in repos, otherwise will be installed by cpanm
+
+#perl-DBD-MySQL
+perl-Crypt-SSLeay
+#perl-Devel-Cover
+perl-IO-Tty
+perl-JSON
+#perl-LDAP
+perl-LWP-Protocol-https
+perl-LWP-Authen-Negotiate
+perl-Math-Round
+perl-Mozilla-CA
+perl-Redis
+perl-Sys-Syslog
+perl-TermReadKey
+perl-Time-HiRes
+perl-XML-LibXML
+#perl-XML-SAX
+perl-XML-Simple
+#perl-YAML
+perl-libwww-perl
+#perl-thrift  # too old, missing Thrift::Exception, Thrift module needs to be newer built from CPAN
+
+#perl-Readonly-XS
+#perl-Readonly
